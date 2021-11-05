@@ -6,6 +6,8 @@ use App\Http\Controllers\GajiController;
 use App\Http\Controllers\GolonganController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Database\Seeder;
+use phpDocumentor\Reflection\Types\Resource_;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,16 +27,20 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/', [DashboardController::class, 'index'])->name('home');
     Route::get('/statistik', [DashboardController::class, 'statistik'])->name('statistik');
-    Route::get( '/data_karyawan',[KaryawanController::class, 'index'])->name('data_karyawan');
+    Route::get( '/data_karyawan_',[Resource::class, 'index'])->name('data_karyawan');
 
-    Route::get( '/data_karyawan/create', [KaryawanController::class, 'create'])->name('data_karyawan.create');
+    Route::get( '/data_karyawan', [KaryawanController::class, 'create'])->name('data_karyawan.create');
     Route::post( '/data_karyawan', [KaryawanController::class, 'store'])->name('data_karyawan.store');
     Route::get( '/data_karyawan/edit/{id}', [KaryawanController::class, 'edit'])->name('data_karyawan.edit');
     Route::post( '/data_karyawan/update/{id}', [KaryawanController::class, 'update'])->name('data_karyawan.update'); 
     Route::delete( '/data_karyawan/destroy/{id}', [KaryawanController::class, 'destroy'])->name('data_karyawan.destroy'); 
-    Route::get(  '/gaji_karyawan',  [GajiController::class, 'index'])->name('gaji_karyawan');
-
-    Route::get(  '/golongan', [GolonganController::class, 'index'])->name('golongan');
+    
+    Route::get(  '/filemanager#',  [storage::class, 'tender'])->name('tender');
+    Route::get(  '//localhost:8080/PT.MIK/',  [views::class, 'index'])->name('index');
+    
+    
+    
+    
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 

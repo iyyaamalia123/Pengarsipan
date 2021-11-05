@@ -157,7 +157,7 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -578,7 +578,7 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -3478,7 +3478,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #9c27b0;
+  color: #000000;
   background-color: transparent;
 }
 
@@ -14519,7 +14519,7 @@ h2.title {
 
 .nav-tabs .nav-link.active {
   color: #333333;
-  border-color: #9c27b0;
+  border-color: #000000;
 }
 
 .nav-tabs .nav-link.active:hover,
@@ -15460,7 +15460,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-color="purple"] li.active>a {
-  background-color: #9c27b0;
+  background-color: #000000;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
 }
 
@@ -16985,8 +16985,8 @@ thead.thead-inverse th,
 }
 
 body {
-  background-color: #eee;
-  color: #3C4858;
+  background-color: rgb(238, 238, 238);
+  color: #f5f6f8;
   font-weight: 300;
 }
 
